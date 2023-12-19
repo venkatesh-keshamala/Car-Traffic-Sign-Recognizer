@@ -1,0 +1,87 @@
+{%extends 'base.html'%}
+{%load static%}
+{%block contents%}
+
+
+    <section class="about full-screen d-lg-flex justify-content-center align-items-center" id="about">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-7 col-md-12 col-12 d-flex align-items-center">
+                    <div class="about-text">
+                        <h1 class="animated animated-text">
+                            <span class="mr-2">User Registrations</span>
+                        </h1>
+                          <form action="{%url 'UserRegisterActions'%}" method="POST" class="comment_form" style="width:100%;color=BLUE">
+
+                    {% csrf_token %}
+                    <table class="table" style="color:BLUE">
+                        <tr>
+                            <td>User Name</td>
+                            <td>{{form.name}}</td>
+                        </tr>
+                        <tr>
+                            <td>Login ID</td>
+                            <td>{{form.loginid}}</td>
+                        </tr>
+                        <tr>
+                            <td>Password</td>
+                            <td>{{form.password}}</td>
+                        </tr>
+                        <tr>
+                            <td>Mobile</td>
+                            <td>{{form.mobile}}</td>
+                        </tr>
+                        <tr>
+                            <td>email</td>
+                            <td>{{form.email}}</td>
+                        </tr>
+                        <tr>
+                            <td>Locality</td>
+                            <td>{{form.locality}}</td>
+                        </tr>
+                        <tr>
+                            <td>Address</td>
+                            <td>{{form.address}}</td>
+                        </tr>
+                        <tr>
+                            <td>City</td>
+                            <td>{{form.city}}</td>
+                        </tr>
+                        <tr>
+                            <td>State</td>
+                            <td>{{form.state}}</td>
+                        </tr>
+                        <tr>
+
+                            <td>{{form.status}}</td>
+                        </tr>
+<tr><td></td>
+     <td><button type="submit" class="btn btn-primary js-scroll-trigger">Register</button></td>
+                        </tr>
+
+
+                        {% if messages %}
+                        {% for message in messages %}
+                        <font color='GREEN'> {{ message }}</font>
+                        {% endfor %}
+                        {% endif %}
+
+                    </table>
+
+                </form>
+
+                </div>
+
+                <div class="col-lg-5 col-md-12 col-12">
+                    <div class="about-image svg">
+                        <img src="{%static 'images/undraw/undraw_software_engineer_lvl5.svg'%}" class="img-fluid" alt="svg image">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+{%endblock%}
