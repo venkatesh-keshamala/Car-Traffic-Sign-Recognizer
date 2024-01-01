@@ -47,4 +47,5 @@ Tranning Accuracy Graph:
 ![git-acc](https://github.com/venkatesh-keshamala/Car-Traffic-Sign-Recognizer/assets/116023226/4bdc2880-1ef4-4efe-9d63-beafa707608e)
 
 Trainning Loss Graph:
+
 ![git-loss](https://github.com/venkatesh-keshamala/Car-Traffic-Sign-Recognizer/assets/116023226/280bcedf-1578-4c18-b447-aa2ba2e5f888)
